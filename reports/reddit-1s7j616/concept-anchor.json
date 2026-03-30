@@ -1,0 +1,78 @@
+{
+  "archetype": "consumer_app",
+  "intent": {
+    "goal": "Build a Chrome extension that uses AI to extract specific product failure modes from Amazon reviews, saving sellers and buyers from hours of manual review reading",
+    "explicit_constraints": [
+      "Free to use (explicitly stated as 100% free)",
+      "Operates directly on the Amazon product page (no context switch)",
+      "One-click interaction model",
+      "Chrome browser only (Chrome Web Store distribution)"
+    ],
+    "non_goals": []
+  },
+  "invariants": [
+    {
+      "property": "access_model",
+      "value": "free, no account required (browser extension)",
+      "source": "I built a 100% free Chrome extension",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "interaction_model",
+      "value": "one-click on Amazon product page, results appear inline",
+      "source": "With one click, it uses AI to read and summarize hundreds of reviews in seconds",
+      "confidence": 0.95,
+      "scope_risk": "low"
+    },
+    {
+      "property": "session_medium",
+      "value": "Chrome browser extension embedded in Amazon product page",
+      "source": "a 100% free Chrome extension that sits directly on the Amazon product page",
+      "confidence": 0.98,
+      "scope_risk": "low"
+    },
+    {
+      "property": "data_source",
+      "value": "Amazon product reviews (from the current product page)",
+      "source": "it uses AI to read and summarize hundreds of reviews in seconds",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "output_specificity",
+      "value": "Specific failure modes with detail (e.g., 'zipper breaks after 3 weeks'), not generic summaries",
+      "source": "instead of just saying 'bad quality', it tells you 'the zipper breaks after 3 weeks'",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "distribution_channel",
+      "value": "Chrome Web Store",
+      "source": "Chrome Web Store: https://chromewebstore.google.com/detail/review-analyzer-pro/ibgmooganaemccoaolbococgkdmcpgoa",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    }
+  ],
+  "identity": {
+    "features": [
+      "Extracts specific, actionable failure modes rather than generic sentiment summaries",
+      "Operates inline on the Amazon product page with a single click -- zero context switching",
+      "Targets the seller competitor research workflow as primary use case, not just casual buyers",
+      "Completely free with Chrome Web Store distribution already live"
+    ],
+    "why_distinctive": "Most review summarizers produce generic sentiment (good/bad). This product's stated differentiator is specificity -- named failure modes with enough detail to act on (design a better product, avoid a problematic product). Combined with the zero-friction in-page placement, it targets a specific professional workflow (Amazon seller competitor research) that generic tools don't optimize for."
+  },
+  "term_flags": [],
+  "founder_profile": {
+    "technical_level": "technical",
+    "domain_expertise": "medium",
+    "inference_basis": "Founder built and shipped a Chrome extension with AI integration as a first real-world project, indicating technical ability; domain expertise is medium because they discovered the pain through personal use rather than deep Amazon seller domain background."
+  },
+  "strategic_signals": {
+    "business_model": "freemium",
+    "success_metric": "usage",
+    "distribution": "plugin_or_extension",
+    "inference_notes": "Business model is classified as freemium rather than open-source or unknown because the founder explicitly states the tool is free but frames it as a product launch (Product Hunt listing, Chrome Web Store listing) which typically signals intent to eventually monetize. Distribution is plugin_or_extension because the product is explicitly a Chrome extension. Success metric is usage because the founder describes this as a first launch and the Product Hunt and Chrome Web Store listings prioritize installs/reach. No revenue model is mentioned so paid tier is unknown."
+  }
+}

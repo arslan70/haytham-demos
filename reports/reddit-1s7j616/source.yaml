@@ -1,0 +1,10 @@
+idea: |
+  Review Analyzer Pro - a free AI Chrome extension that extracts specific product
+  failure modes from Amazon reviews for sellers doing competitor research.
+source_url: https://www.reddit.com/r/SideProject/comments/1s7j616/i_got_tired_of_manually_reading_amazon_reviews_so/
+source_type: reddit_post
+fetched_at: "2026-03-30T14:00:00Z"
+exported_at: "2026-03-30T14:00:00Z"
+haytham_version: "0.3.14"
+verdict: PIVOT
+composite_score: 2.8
