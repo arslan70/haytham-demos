@@ -1,0 +1,91 @@
+{
+  "archetype": "consumer_app",
+  "intent": {
+    "goal": "Validate whether a minimalist, privacy-first car expense tracker for multi-vehicle owners has a viable user base, and determine if the product has any real chance of traction in 2026.",
+    "explicit_constraints": [
+      "No ads",
+      "No data selling",
+      "Minimalist interface (no complex menus)",
+      "Fast logging -- minimal friction per entry",
+      "Dark mode aesthetic"
+    ],
+    "non_goals": []
+  },
+  "invariants": [
+    {
+      "property": "access_model",
+      "value": "no-account-required, local-first",
+      "source": "No ads, no selling your data, no 50-step menus. Just a quick log and you're done.",
+      "confidence": 0.85,
+      "scope_risk": "low"
+    },
+    {
+      "property": "interaction_model",
+      "value": "single-entry-form per expense event, triggered at point of transaction",
+      "source": "Just a quick log and you're done.",
+      "confidence": 0.9,
+      "scope_risk": "low"
+    },
+    {
+      "property": "session_medium",
+      "value": "iOS native app",
+      "source": "App Store: https://apps.apple.com/us/app/driveledger-car-cost-tracker/id6760759755",
+      "confidence": 0.95,
+      "scope_risk": "low"
+    },
+    {
+      "property": "data_model",
+      "value": "multi-vehicle, separate ledgers per vehicle",
+      "source": "I daily drive two cars (one for work, one for weekends) and tracking expenses in spreadsheets felt like a part-time job.",
+      "confidence": 0.9,
+      "scope_risk": "low"
+    },
+    {
+      "property": "monetization_model",
+      "value": "unknown -- ad-free is stated but revenue model is not specified",
+      "source": "No ads, no selling your data.",
+      "confidence": 0.5,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "privacy_stance",
+      "value": "no third-party data sharing, no behavioral tracking",
+      "source": "No ads, no selling your data.",
+      "confidence": 0.9,
+      "scope_risk": "low"
+    }
+  ],
+  "identity": {
+    "features": [
+      "Multi-vehicle ledger management in a single app",
+      "Speed-first UX -- designed for logging at point of transaction",
+      "Explicitly privacy-first and ad-free",
+      "Already shipped and live on the iOS App Store",
+      "Founder is a genuine daily user of the product"
+    ],
+    "why_distinctive": "Most car-tracker apps are either feature-heavy fleet tools or ad-supported consumer apps. DriveLedger competes on the opposite axis: fewer features, faster entry, no monetization through user data. The founder's own frustration is the strongest signal that the problem is real, and the live App Store listing means this is a validation question, not a build question."
+  },
+  "term_flags": [
+    {
+      "term": "minimalist",
+      "source_quote": "It's a minimalist, dark and fast car cost tracker.",
+      "chosen_interpretation": "Low field count per entry form and no feature bloat -- the UI is optimized for speed of logging, not breadth of analytics.",
+      "alternatives": [
+        "Minimalist could mean visual design only (dark theme, clean typography) without implying reduced feature scope"
+      ],
+      "impact": "If minimalist means design-only, the product could legitimately add trend charts, reminders, and export without violating the founder's intent. If it means reduced scope, those features would be out of bounds for MVP.",
+      "invariant_refs": ["interaction_model"]
+    }
+  ],
+  "founder_profile": {
+    "technical_level": "technical",
+    "domain_expertise": "medium",
+    "inference_basis": "The founder has independently shipped 20-25 apps and a live App Store product, indicating strong technical execution ability. Domain expertise is medium because the car-tracking problem is sourced from personal experience with two vehicles, not from deep research into fleet management or automotive finance."
+  },
+  "strategic_signals": {
+    "business_model": "unknown",
+    "success_metric": "usage",
+    "distribution": "marketplace_listing",
+    "inference_notes": "Business model is unknown -- the founder explicitly rules out ads and data selling but names no alternative (one-time purchase, subscription, freemium). Success metric is inferred as usage because the founder's stated concern is zero users and zero traction, not zero revenue. Distribution is clearly App Store (marketplace_listing) based on the provided URL."
+  }
+}
