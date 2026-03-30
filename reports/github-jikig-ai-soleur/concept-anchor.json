@@ -1,0 +1,106 @@
+{
+  "archetype": "developer_tool",
+  "intent": {
+    "goal": "Give a single founder the operational leverage of a full company by routing any task to a specialized agent with persistent company context -- delivered as a Claude Code plugin",
+    "explicit_constraints": [
+      "Delivered as a Claude Code plugin (claude plugin install soleur)",
+      "Three commands only (minimal surface area)",
+      "BSL 1.1 license (not fully open-source)",
+      "61 agents across 8 departments",
+      "TypeScript implementation"
+    ],
+    "non_goals": []
+  },
+  "invariants": [
+    {
+      "property": "access_model",
+      "value": "Claude Code plugin (installed via claude plugin install)",
+      "source": "Installation: claude plugin install soleur",
+      "confidence": 0.98,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "interaction_model",
+      "value": "Single intent-routing command that classifies and dispatches to department agents",
+      "source": "/soleur:go <what you want to do> -- classifies your intent and routes to the right workflow",
+      "confidence": 0.95,
+      "scope_risk": "high"
+    },
+    {
+      "property": "session_medium",
+      "value": "Claude Code CLI session with persistent knowledge accumulation across sessions",
+      "source": "compounding your company knowledge with every session -- every problem you solve makes the next one easier",
+      "confidence": 0.90,
+      "scope_risk": "high"
+    },
+    {
+      "property": "agent_scope",
+      "value": "61 agents across 8 departments: Engineering, Finance, Marketing, Legal, Operations, Product, Sales, Support",
+      "source": "61 agents across engineering, finance, marketing, legal, operations, product, sales, and support",
+      "confidence": 0.98,
+      "scope_risk": "high"
+    },
+    {
+      "property": "knowledge_model",
+      "value": "Compounding company knowledge store that accumulates across sessions",
+      "source": "compounding your company knowledge with every session -- every problem you solve makes the next one easier",
+      "confidence": 0.88,
+      "scope_risk": "high"
+    },
+    {
+      "property": "workflow_model",
+      "value": "brainstorm -> plan -> work -> review -> compound",
+      "source": "brainstorm --> plan --> work --> review --> compound",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "target_user",
+      "value": "Single founder (solo) seeking leverage of a full organization",
+      "source": "Soleur gives a single founder the leverage of a full organization",
+      "confidence": 0.95,
+      "scope_risk": "low"
+    },
+    {
+      "property": "distribution",
+      "value": "Claude Code plugin marketplace",
+      "source": "claude plugin install soleur",
+      "confidence": 0.98,
+      "scope_risk": "low"
+    }
+  ],
+  "identity": {
+    "features": [
+      "Company-as-a-Service framing: replaces hiring with agents",
+      "Single routing command abstracts 61 agents from the user",
+      "Persistent, compounding knowledge base as a core differentiator (not just stateless AI calls)",
+      "Full departmental coverage in one plugin (8 departments)",
+      "BSL 1.1 license signals commercial product, not open-source community tool"
+    ],
+    "why_distinctive": "Most AI agent tools are either general-purpose (no domain specialization) or single-function (one department). Soleur's claim is full organizational coverage with a single entry point and a knowledge model that improves over time -- targeting the specific gap of the solo founder who cannot afford to hire."
+  },
+  "term_flags": [
+    {
+      "term": "compounding your company knowledge",
+      "source_quote": "compounding your company knowledge with every session -- every problem you solve makes the next one easier",
+      "chosen_interpretation": "A persistent, structured knowledge store (e.g., files or a database) that agents read and write to across sessions, accumulating decisions, context, and outputs",
+      "alternatives": [
+        "The LLM context window grows larger with each session (stateful conversation memory only)",
+        "A user-maintained wiki or document that agents reference but do not autonomously update"
+      ],
+      "impact": "The chosen interpretation implies a durable, agent-writable knowledge architecture. If it is only conversation memory, the 'compounding' claim is weaker and the session_medium and knowledge_model invariants change significantly.",
+      "invariant_refs": ["session_medium", "knowledge_model"]
+    }
+  ],
+  "founder_profile": {
+    "technical_level": "technical",
+    "domain_expertise": "high",
+    "inference_basis": "The idea specifies a multi-agent architecture with 61 agents, an explicit routing workflow, a named TypeScript implementation, a BSL license, and a live GitHub repo -- indicating a technical founder with direct domain knowledge of AI agent systems."
+  },
+  "strategic_signals": {
+    "business_model": "saas",
+    "success_metric": "usage",
+    "distribution": "plugin_or_extension",
+    "inference_notes": "BSL 1.1 is a source-available commercial license that allows use but restricts competing hosting -- strongly implying a paid SaaS model. Distribution is explicitly a Claude Code plugin. Success metric inferred as usage (compound knowledge grows with sessions) rather than revenue, since no pricing or revenue signal appears in the idea description. Business model classified saas as the most likely monetization path under BSL, but this needs founder confirmation."
+  }
+}
