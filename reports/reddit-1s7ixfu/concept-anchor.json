@@ -1,0 +1,91 @@
+{
+  "archetype": "consumer_app",
+  "intent": {
+    "goal": "Build and distribute a free, open-source Bloomberg Terminal clone that gives self-directed investors and finance students access to professional-grade market data, charting, screening, and AI analysis without a subscription.",
+    "explicit_constraints": [
+      "Fully free -- no subscription required",
+      "Open-source codebase (GitHub)",
+      "AI financial analyst requires the user to bring their own API key (BYOK)",
+      "Keyboard-driven command bar interface (terminal aesthetic)"
+    ],
+    "non_goals": []
+  },
+  "invariants": [
+    {
+      "property": "access_model",
+      "value": "open-source self-hosted or free web app; no subscription gate",
+      "source": "What's free: Everything. The code, the terminal, the AI agent (if you bring your own API key).",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "interaction_model",
+      "value": "keyboard-driven command bar (terminal-style UX)",
+      "source": "Keyboard-driven command bar",
+      "confidence": 0.9,
+      "scope_risk": "low"
+    },
+    {
+      "property": "session_medium",
+      "value": "web application (browser-based terminal UI)",
+      "source": "Bloomberg Terminal clone -- implies a rich desktop-like UI delivered via web",
+      "confidence": 0.85,
+      "scope_risk": "low"
+    },
+    {
+      "property": "data_model",
+      "value": "real-time multi-asset market data (stocks, indices, crypto, commodities)",
+      "source": "Real-time market data (stocks, indices, crypto, commodities)",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "ai_integration",
+      "value": "BYOK (bring your own API key) AI financial analyst powered by Claude",
+      "source": "AI financial analyst (powered by Claude) ... if you bring your own API key",
+      "confidence": 0.95,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "distribution_model",
+      "value": "open-source GitHub repository with public access",
+      "source": "now it's open source. repo: https://github.com/thompson0012/blmtrm",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    }
+  ],
+  "identity": {
+    "features": [
+      "Zero-cost access to Bloomberg-equivalent workflows",
+      "BYOK AI analyst that operates on live market data the user is already viewing",
+      "Keyboard-driven terminal UX (rare in consumer finance tools)",
+      "Open-source -- forkable, self-hostable, community-extensible",
+      "All-in-one: quotes + charts + news + screener + alerts in a single interface"
+    ],
+    "why_distinctive": "Consumer finance tools are either free-but-fragmented (Yahoo Finance, Google Finance) or unified-but-expensive (Bloomberg, FactSet). BLMTRM occupies the vacant quadrant: unified AND free. The keyboard-driven UX and open-source distribution create a developer-adjacent user base unlikely to be served by incumbents."
+  },
+  "term_flags": [
+    {
+      "term": "Bloomberg Terminal clone",
+      "source_quote": "BLMTRM is a Bloomberg Terminal clone I built because I couldn't afford the real thing.",
+      "chosen_interpretation": "A web application that replicates the core workflow of Bloomberg Terminal (multi-asset data, charting, news, screening) for retail/independent users, not a literal API-compatible or enterprise-grade replica.",
+      "alternatives": [
+        "A pixel-faithful reproduction of Bloomberg's UI/UX targeting institutional switchers",
+        "A developer tool / API wrapper around Bloomberg's data model"
+      ],
+      "impact": "If interpreted as an enterprise-grade replica, the target segment and scope risk change substantially -- the product would need Bloomberg-grade data licensing, compliance features, and multi-user admin. The retail interpretation keeps the product lean and the access model free.",
+      "invariant_refs": ["access_model", "data_model"]
+    }
+  ],
+  "founder_profile": {
+    "technical_level": "technical",
+    "domain_expertise": "medium",
+    "inference_basis": "Built a full Bloomberg Terminal clone with real-time data feeds, interactive charts, a stock screener, and an AI integration in 2 weeks and published it to GitHub -- this indicates strong technical execution. Domain expertise is medium: the founder understands retail trading workflows but the product description does not reference institutional finance concepts (factor models, order flow, etc.)."
+  },
+  "strategic_signals": {
+    "business_model": "open-source",
+    "success_metric": "community_adoption",
+    "distribution": "hosted",
+    "inference_notes": "The idea explicitly states 'now it's open source' and links to a GitHub repo, making open-source the business model. The Reddit post format and 'free for everything' framing strongly imply community adoption as the success metric. Distribution is classified as hosted because the product is a web terminal (not a CLI install or desktop app), but it may also be self-hostable given the open-source model -- this needs founder clarification."
+  }
+}

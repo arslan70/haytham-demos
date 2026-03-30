@@ -1,0 +1,10 @@
+idea: |
+  I spent 2 weeks building a free Bloomberg Terminal — now it's open source.
+  BLMTRM is a Bloomberg Terminal clone with real-time market data, charts, news, screener, AI analyst, and keyboard-driven command bar.
+source_url: https://www.reddit.com/r/SideProject/comments/1s7ixfu/i_spent_2_weeks_building_a_free_bloomberg/
+source_type: reddit_post
+fetched_at: "2026-03-30T12:00:00Z"
+exported_at: "2026-03-30T12:00:00Z"
+haytham_version: "0.3.14"
+verdict: GO
+composite_score: 3.2
