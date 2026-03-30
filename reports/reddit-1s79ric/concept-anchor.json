@@ -1,0 +1,108 @@
+{
+  "archetype": "consumer_app",
+  "intent": {
+    "goal": "Build a free, native macOS screenshot and screen recording tool that matches or exceeds paid alternatives like CleanShot X, distributed as open-source",
+    "explicit_constraints": [
+      "macOS only (native Swift/AppKit)",
+      "No Electron -- must be lightweight and native",
+      "GPLv3 open-source license",
+      "Free to use -- no paid tier described",
+      "Distributed via Homebrew"
+    ],
+    "non_goals": []
+  },
+  "invariants": [
+    {
+      "property": "access_model",
+      "value": "open-source, free download via Homebrew",
+      "source": "Fully open-source (GPLv3) ... Install: brew install sw33tlie/macshot/macshot",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    },
+    {
+      "property": "interaction_model",
+      "value": "native macOS desktop app (menu bar or hotkey triggered capture flow)",
+      "source": "native Swift/AppKit, no Electron, lightweight",
+      "confidence": 0.95,
+      "scope_risk": "low"
+    },
+    {
+      "property": "session_medium",
+      "value": "local desktop session; no server-side processing required for core features",
+      "source": "native Swift/AppKit ... capture, annotate, and copy/save in one flow",
+      "confidence": 0.9,
+      "scope_risk": "low"
+    },
+    {
+      "property": "platform_constraint",
+      "value": "macOS only",
+      "source": "free, open-source screenshot & screen recording tool for macOS",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    },
+    {
+      "property": "distribution_model",
+      "value": "Homebrew tap (sw33tlie/macshot/macshot)",
+      "source": "Install: brew install sw33tlie/macshot/macshot",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    },
+    {
+      "property": "capture_scope",
+      "value": "screenshots, scroll capture, and screen recording (MP4/GIF) with audio",
+      "source": "Screen recording (MP4/GIF) with system audio + mic; Scroll capture with auto-stitching",
+      "confidence": 1.0,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "annotation_capability",
+      "value": "18 annotation tools including arrows, shapes, text, blur, pixelate, numbered markers, emoji stamps",
+      "source": "18 annotation tools (arrows, shapes, text, pixelate, blur, numbered markers, emoji stamps, etc.)",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    },
+    {
+      "property": "pii_handling",
+      "value": "auto-redact PII (emails, phone numbers, API keys) before sharing",
+      "source": "Auto-redact PII (emails, phone numbers, API keys) with one click",
+      "confidence": 1.0,
+      "scope_risk": "medium"
+    },
+    {
+      "property": "cloud_integration",
+      "value": "upload to Google Drive, imgbb, or any S3-compatible storage",
+      "source": "Upload to Google Drive, imgbb, or any S3-compatible storage",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    },
+    {
+      "property": "ocr_capability",
+      "value": "OCR text extraction supporting 30+ languages",
+      "source": "OCR text extraction (30+ languages)",
+      "confidence": 1.0,
+      "scope_risk": "low"
+    }
+  ],
+  "identity": {
+    "features": [
+      "Free and open-source (GPLv3) with no paid tier",
+      "Native Swift/AppKit -- not Electron, genuinely lightweight",
+      "Auto-redact PII (emails, phone numbers, API keys) before sharing",
+      "Full capture-to-share pipeline in one app (capture, annotate, record, OCR, upload)",
+      "Positioned explicitly as a CleanShot X replacement"
+    ],
+    "why_distinctive": "The combination of native performance, zero cost, PII auto-redaction, and feature parity with paid tools occupies a gap between underpowered free tools and overpriced paid subscriptions. The GPLv3 license and Homebrew distribution align with developer-first adoption."
+  },
+  "term_flags": [],
+  "founder_profile": {
+    "technical_level": "technical",
+    "domain_expertise": "high",
+    "inference_basis": "Founder built the app in native Swift/AppKit, maintains a Homebrew tap, references specific technical features (S3-compatible storage, MP4/GIF encoding, OCR), and has shipped v3.4 -- indicating deep macOS development and product experience."
+  },
+  "strategic_signals": {
+    "business_model": "open-source",
+    "success_metric": "community_adoption",
+    "distribution": "standalone",
+    "inference_notes": "GPLv3 and 'free' are explicit in the idea. Success framing ('Would love feedback from other Mac users') points to community adoption, not revenue. Distribution is a standalone Homebrew-installed macOS app, not a plugin or hosted service. No monetization signal present."
+  }
+}
